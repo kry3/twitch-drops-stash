@@ -1,4 +1,13 @@
-# Twitch Drops Stash
+<p align="center">
+  <img src="./drops-stash.svg" width="76" height="76" alt="Twitch Drops Stash logo">
+</p>
+
+<h1 align="center">Twitch Drops Stash</h1>
+
+<p align="center">
+  <strong>Windows x64 · 0.2.0 Beta 1 · Pre-release</strong><br>
+  <a href="#возможности">Русский</a> · <a href="#english">English</a>
+</p>
 
 Приложение для Windows, которое находит кампании Twitch Drops, отслеживает прогресс и автоматически забирает доступные награды. Сейчас доступна публичная бета для тестирования.
 
@@ -11,11 +20,17 @@
 - Инвентарь с прогрессом, просмотр трансляции, работа в трее и автозапуск.
 - Русский и английский интерфейс, светлая и тёмная темы.
 
+## Как это работает
+
+После входа приложение загружает доступные кампании, выбирает подходящую трансляцию по очереди игр и отслеживает прогресс по данным Twitch. Если эфир закончится, оно подберёт другой подходящий канал. Когда Twitch подтвердит выполнение условий, приложение заберёт награду.
+
 ## Первый запуск
 
 1. Распакуйте ZIP в отдельную папку с правом записи.
 2. Запустите **Twitch Drops Stash.exe**. Приложению нужен Microsoft Edge WebView2 Runtime.
 3. Войдите в Twitch через браузер. Для кампаний с привязкой свяжите аккаунт Twitch с аккаунтом игры.
+
+## Тестирование и обратная связь
 
 Сборка проверялась на Windows 11 x64. Windows 10 x64 и Windows 11 ARM64 ещё требуют проверки.
 
@@ -35,4 +50,4 @@ For bug reports, include your Windows version, the steps to reproduce the issue,
 
 ---
 
-Сборка / Build by **kry3**. Основано на / Based on [TwitchDropsMiner by DevilXD](https://github.com/DevilXD/TwitchDropsMiner). Лицензия / License: MIT, included in the ZIP.
+Сборка / Build by **kry3**. Основано на / Based on [TwitchDropsMiner by DevilXD](https://github.com/DevilXD/TwitchDropsMiner). Лицензия / License: [MIT](./LICENSE).

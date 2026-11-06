@@ -1,0 +1,20 @@
+name: "Предложить идею / Suggest an idea"
+description: "Предложить улучшение Twitch Drops Stash / Suggest an improvement to Twitch Drops Stash"
+body:
+  - type: markdown
+    attributes:
+      value: "Предложение будет публичным. Можно писать на русском или английском. / Your suggestion will be public. Russian and English are welcome."
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Что изменить? / What would you change?"
+      description: "Опишите, как должно работать улучшение. / Describe how the improvement should work."
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Зачем это нужно? / Why would it help?"
+      description: "Расскажите, в какой ситуации вам это пригодится. / Tell us when this would help you."
+    validations:
+      required: true

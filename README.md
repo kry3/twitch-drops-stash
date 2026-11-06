@@ -13,6 +13,16 @@
 
 **[Скачать Beta 1 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/download/v0.2.0-beta.1/Twitch-Drops-Stash-0.2.0-beta.1-Windows-x64.zip)** · [Описание релиза и SHA-256](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.2.0-beta.1) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues)
 
+## Скриншоты / Screenshots
+
+Обзор показывает текущую награду и прогресс. В настройках можно выбрать язык, оформление и параметры работы в трее. На скриншотах — демонстрационные данные.
+
+The overview shows the current reward and progress. Settings include language, appearance, and system tray options. Screenshots use demo data.
+
+![Обзор: награда и прогресс / Overview: reward and progress](stash-overview.png)
+
+![Настройки приложения / Application settings](stash-settings.png)
+
 ## Возможности
 
 - Автоматический выбор канала и получение наград после подтверждения Twitch.

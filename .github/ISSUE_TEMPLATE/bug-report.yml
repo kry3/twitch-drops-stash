@@ -1,0 +1,54 @@
+name: "Сообщить об ошибке / Bug report"
+description: "Сбой приложения или предупреждение Windows / App bug or Windows warning"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Заполняйте на русском или английском. Обращение будет публичным. Скрывайте личные данные на скриншотах и не прикладывайте токены или файлы сессии Twitch.
+
+        Russian and English are welcome. This issue is public. Redact personal details from screenshots and omit Twitch tokens and session files.
+  - type: input
+    id: app-version
+    attributes:
+      label: "Версия Twitch Drops Stash / App version"
+      placeholder: "0.2.0 Beta 1"
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: "Версия и сборка Windows / Windows version and build"
+      description: "Нажмите Win+R и введите winver. / Press Win+R and enter winver."
+      placeholder: "Windows 11 24H2, 26100"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Шаги воспроизведения / Steps to reproduce"
+      description: "Что вы делали до сбоя? / What did you do before the issue appeared?"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: "Что произошло и чего вы ожидали / Actual and expected behavior"
+      description: "Вставьте точный текст ошибки и код, если он есть. Можно приложить скриншот. / Paste the exact error and code if available. A screenshot is welcome."
+    validations:
+      required: true
+  - type: dropdown
+    id: warning-stage
+    attributes:
+      label: "Когда появилось предупреждение Windows? / When did the Windows warning appear?"
+      options:
+        - "При скачивании / During download"
+        - "При распаковке / During extraction"
+        - "При запуске / On launch"
+        - "После запуска / After launch"
+        - "Не уверен / Not sure"
+        - "Предупреждения не было / No warning"
+  - type: input
+    id: threat-name
+    attributes:
+      label: "Название угрозы / Threat name"
+      description: "Заполните, если Защитник Windows показал название обнаружения. / Fill in if Microsoft Defender displayed a detection name."

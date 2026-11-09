@@ -61,7 +61,7 @@
 
 При ошибке откройте [GitHub Issue](https://github.com/kry3/twitch-drops-stash/issues) и укажите версию Windows, шаги воспроизведения и результат. В ZIP есть инструкция по сохранению диагностического отчёта — проверьте его содержимое перед публикацией.
 
-SHA-256 ZIP `0E7B12568D22F9CE1E63F34BEB68122645DE99A836C9EA78B266C5B208743C49`
+SHA-256 ZIP `0CC417FE6946FD98390310703BD920A4016D4FF44C8F56A2C218B1FACE78956E`
 
 ---
 
@@ -107,7 +107,7 @@ Reports about first sign-in, Drops progress and claiming, the tray, autostart, l
 
 For a bug, open a [GitHub issue](https://github.com/kry3/twitch-drops-stash/issues) with your Windows version, the steps to reproduce, and what happened. The ZIP explains how to save a diagnostic report — review it before sharing.
 
-SHA-256 ZIP `0E7B12568D22F9CE1E63F34BEB68122645DE99A836C9EA78B266C5B208743C49`
+SHA-256 ZIP `0CC417FE6946FD98390310703BD920A4016D4FF44C8F56A2C218B1FACE78956E`
 
 ---
 

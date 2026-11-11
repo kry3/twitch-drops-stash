@@ -69,10 +69,11 @@ MIT. Здесь ответы на то, что спрашивают чаще в�
 
 ## Куда уходит отчёт об ошибке и идея
 
-По умолчанию — автору в Telegram: его видит только автор, аккаунт GitHub для этого не нужен.
-GitHub остаётся вторым вариантом: обращение публичное, видно всем и остаётся в истории. В
-обоих случаях уходит версия и технические данные сборки, а описание вы пишете сами и видите
-перед отправкой. Если сервер отчётов недоступен, приложение предлагает GitHub само.
+Два пути. **Telegram** — личное сообщение автору: кроме него никто не видит, аккаунт GitHub
+не нужен. Он предлагается первым, когда сервер отчётов доступен. **GitHub** — публичное
+обращение: видно всем и остаётся в истории. Если сервер отчётов не отвечает, приложение
+оставляет только GitHub. В обоих случаях уходит версия и технические данные сборки, а
+описание вы пишете сами и видите перед отправкой.
 
 ## Как обновиться и как откатиться
 
@@ -136,11 +137,12 @@ is never seen by the app: you sign in on the Twitch site in your browser.
 followed channel names, account id. No sign-in token. It never leaves the machine by itself:
 only what you send with the "Report a problem" button. `diagnostics.disabled` turns it off.
 
-**Where does a report or an idea go?** By default to the author on Telegram: only the author
-sees it, and no GitHub account is needed. GitHub stays the second option: the issue is public
-and stays in the history. Both carry the version and the technical data of the build; the
-description is yours and stays visible before sending. If the report server is unreachable,
-the app offers GitHub instead.
+**Where does a report or an idea go?** Two ways. **Telegram** is a private message to the
+author: nobody else sees it, and no GitHub account is needed; it is offered first while the
+report server is reachable. **GitHub** is a public issue: everyone sees it and it stays in the
+history. When the report server does not answer, the app leaves GitHub only. Both carry the
+version and the technical data of the build; the description is yours and stays visible
+before sending.
 
 **How do I update or roll back?** About → Check for updates → Download → Install and restart.
 The previous EXE is kept as `Twitch Drops Stash.exe.bak-update` and restored if the new build

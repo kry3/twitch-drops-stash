@@ -5,13 +5,15 @@
 <h1 align="center">Twitch Drops Stash</h1>
 
 <p align="center">
-  <strong>Windows x64 · 0.6.0 Beta 7 · Pre-release</strong><br>
+  <strong>Windows x64 · 0.7.0 Beta 10 · Pre-release</strong><br>
   <a href="#возможности">Русский</a> · <a href="#english">English</a>
 </p>
 
-Приложение для Windows, которое находит кампании Twitch Drops, отслеживает прогресс и автоматически забирает доступные награды. Эта бета добавляет обновления прямо из GitHub Releases: приложение само проверяет новый выпуск, сверяет контрольную сумму, заменяет себя и откатывается, если новая сборка не запустилась.
+Приложение для Windows, которое находит кампании Twitch Drops, отслеживает прогресс и автоматически забирает доступные награды. Обновления приходят прямо из GitHub Releases: приложение само проверяет новый выпуск, сверяет контрольную сумму, заменяет себя и откатывается, если новая сборка не запустилась.
 
-**[Скачать 0.6.0 Beta 7 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.6.0-beta.7)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.6.0-beta.7) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+**[Скачать 0.7.0 Beta 10 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.7.0-beta.10)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.7.0-beta.10) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+
+**Что нового в 0.7.0 Beta 10.** Пауза с длительностью: до отмены, 10 минут, час или до завтра. Уведомление в трее о полученной награде — одна сводка вместо пяти окон. Экспорт истории наград в CSV открывается в Excel. В строке состояния видно, когда Twitch последний раз отвечал: «проверено только что», «проверено 4 мин назад»; если 15 минут нет ни ответов, ни прогресса, появляется жёлтая плашка «Похоже, Twitch не отвечает» с кнопкой «Переподключиться». Про баллы канала в этой сборке есть точный ответ: минута просмотра отправляется, но **начисление баллов этим способом не подтверждено** — подробности в заметках к выпуску.
 
 ## Скриншоты
 
@@ -34,11 +36,11 @@
 
 ## Как это работает
 
-После входа приложение загружает доступные кампании, выбирает подходящую трансляцию по очереди игр и отслеживает прогресс по данным Twitch. Если эфир закончится, оно подберёт другой подходящий канал. Когда Twitch подтвердит условия, приложение заберёт награду. Баллы канала при этом только читаются — приложение не выдаёт бонусы за вас.
+После входа приложение загружает доступные кампании, выбирает подходящую трансляцию по очереди игр и отслеживает прогресс по данным Twitch. Если эфир закончится, оно подберёт другой подходящий канал. Когда Twitch подтвердит условия, приложение заберёт награду. Баллы канала оно читает и сообщает Twitch о просмотренной минуте, но начисление баллов этим способом не подтверждено, а забор бонусов остаётся экспериментальным.
 
 ## Первый запуск
 
-1. Скачайте [ZIP для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.6.0-beta.7) и распакуйте в отдельную папку с правом записи.
+1. Скачайте [ZIP для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.7.0-beta.10) и распакуйте в отдельную папку с правом записи.
 2. Запустите **Twitch Drops Stash.exe**. Нужен Microsoft Edge WebView2 Runtime (в Windows 11 он уже есть).
 3. Войдите в Twitch через браузер. Для кампаний с привязкой свяжите аккаунт Twitch с аккаунтом игры.
 
@@ -61,15 +63,17 @@
 
 При ошибке откройте [GitHub Issue](https://github.com/kry3/twitch-drops-stash/issues) и укажите версию Windows, шаги воспроизведения и результат. В ZIP есть инструкция по сохранению диагностического отчёта — проверьте его содержимое перед публикацией.
 
-SHA-256 ZIP `0CC417FE6946FD98390310703BD920A4016D4FF44C8F56A2C218B1FACE78956E`
+SHA-256 ZIP `3735219D30BAD1797E68949319684F595B1FC6E0AFCAD2245BBECE5D825D49A4`
 
 ---
 
 ## English
 
-Twitch Drops Stash is a Windows app that finds Twitch Drops campaigns, tracks progress, and automatically claims eligible rewards. This beta adds updates straight from GitHub Releases: the app checks for a new release, verifies its checksum, replaces itself, and rolls back if the new build does not start.
+Twitch Drops Stash is a Windows app that finds Twitch Drops campaigns, tracks progress, and automatically claims eligible rewards. Updates come straight from GitHub Releases: the app checks for a new release, verifies its checksum, replaces itself, and rolls back if the new build does not start.
 
-**[Download 0.6.0 Beta 7 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.6.0-beta.7)** · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+**[Download 0.7.0 Beta 10 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.7.0-beta.10)** · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+
+**What's new in 0.7.0 Beta 10.** Pause with a duration: until cancelled, 10 minutes, an hour, or until tomorrow. A tray notification for a claimed reward — one summary instead of five popups. Reward history exports to CSV and opens in Excel. The status line says when Twitch last answered — "checked just now", "checked 4 min ago" — and after 15 minutes with no answers and no progress a yellow note appears: "Twitch seems to be silent", with a Reconnect button. Channel points get a precise answer in this build: the watched minute is sent, but **earning points this way is not confirmed** — see the release notes.
 
 The overview shows the current reward, progress, and the game queue. Settings cover language, appearance, progress display, and tray behaviour. About holds the update channel and the version check.
 
@@ -84,7 +88,7 @@ The overview shows the current reward, progress, and the game queue. Settings co
 
 ### Getting started
 
-1. Download the [Windows x64 ZIP](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.6.0-beta.7) and extract it to a writable folder.
+1. Download the [Windows x64 ZIP](https://github.com/kry3/twitch-drops-stash/releases/tag/v0.7.0-beta.10) and extract it to a writable folder.
 2. Run **Twitch Drops Stash.exe**. Microsoft Edge WebView2 Runtime is required (Windows 11 ships it).
 3. Sign in to Twitch in your browser. Link your Twitch and game accounts if the campaign requires it.
 
@@ -107,7 +111,7 @@ Reports about first sign-in, Drops progress and claiming, the tray, autostart, l
 
 For a bug, open a [GitHub issue](https://github.com/kry3/twitch-drops-stash/issues) with your Windows version, the steps to reproduce, and what happened. The ZIP explains how to save a diagnostic report — review it before sharing.
 
-SHA-256 ZIP `0CC417FE6946FD98390310703BD920A4016D4FF44C8F56A2C218B1FACE78956E`
+SHA-256 ZIP `3735219D30BAD1797E68949319684F595B1FC6E0AFCAD2245BBECE5D825D49A4`
 
 ---
 

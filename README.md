@@ -5,15 +5,15 @@
 <h1 align="center">Twitch Drops Stash</h1>
 
 <p align="center">
-  <strong>Windows x64 · 1.0.2 · Stable</strong><br>
+  <strong>Windows x64 · 1.0.3 · Stable</strong><br>
   <a href="#возможности">Русский</a> · <a href="#english">English</a>
 </p>
 
 Приложение для Windows, которое находит кампании Twitch Drops, отслеживает прогресс и автоматически забирает доступные награды. Обновления приходят прямо из GitHub Releases: приложение само проверяет новый выпуск, сверяет контрольную сумму, заменяет себя и откатывается, если новая сборка не запустилась.
 
-**[Скачать 1.0.2 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2) · [Частые вопросы](./FAQ.md) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+**[Скачать 1.0.3 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3) · [Частые вопросы](./FAQ.md) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
 
-**Что нового в 1.0.2.** Обновление больше не начинается заново после обрыва: приложение просит у сервера остаток и дописывает файл, а сумма проверяется как раньше. Под полосой прогресса видно скорость и остаток времени, а раз в 10 секунд замер уходит в журнал — по отчёту видно, медленный это канал или рваный. Размер обновления показан до нажатия. Установка перестала выглядеть зависанием: подтверждение запуска ждётся 45 секунд вместо 120.
+**Что нового в 1.0.3.** Исправление ошибок, найденных в 1.0.2 сразу после выпуска. Если после замены файла что-то пошло не так, помощник теперь возвращает прежнюю сборку, а не запускает недописанный файл: раньше в этот момент откат не выполнялся, и человек оставался без ответа и без программы. Откат ждёт фактического выхода приложения и терпеливее относится к файлу, занятому антивирусом. Вход в другой аккаунт во время загрузки аватарки больше не записывает чужие cookies. Смена канала отменяет уже начатую загрузку обновления. Кнопка выгрузки наград отдаёт CSV, а не ошибку 500.
 
 ## Скриншоты
 
@@ -40,7 +40,7 @@
 
 ## Первый запуск
 
-1. Скачайте [ZIP для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2) и распакуйте в отдельную папку с правом записи.
+1. Скачайте [ZIP для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3) и распакуйте в отдельную папку с правом записи.
 2. Запустите **Twitch Drops Stash.exe**. Нужен Microsoft Edge WebView2 Runtime (в Windows 11 он уже есть).
 3. Войдите в Twitch через браузер. Для кампаний с привязкой свяжите аккаунт Twitch с аккаунтом игры.
 
@@ -63,7 +63,7 @@ Windows запоминает предупреждение по метке «ск
 
 - «Проверить обновления» показывает версию, список изменений и размер.
 - «Скачать обновление» кладёт архив во временную папку приложения и сверяет SHA-256 с опубликованной суммой.
-- «Установить и перезапустить» закрывает приложение, сохраняет прежний EXE как `Twitch Drops Stash.exe.bak-update`, ставит новый и запускает его. Если новая сборка не подтвердила работу интерфейса, помощник вернёт прежний EXE.
+- «Установить и перезапустить» закрывает приложение, сохраняет прежний EXE как `Twitch Drops Stash.exe.bak-update`, ставит новый и запускает его. Если после замены файла что-то пошло не так, помощник вернёт прежний EXE.
 - Итог установки — в `updates\result.json` и `updates\updater.log` рядом с EXE.
 
 **Обновление с 0.2.0 Beta 2 вручную.** Полностью выйдите из приложения, сохраните копию старого EXE и замените его новым из ZIP. Сессия Twitch, настройки и собранные часы сохранятся.
@@ -76,7 +76,7 @@ Windows запоминает предупреждение по метке «ск
 
 При ошибке откройте [GitHub Issue](https://github.com/kry3/twitch-drops-stash/issues) и укажите версию Windows, шаги воспроизведения и результат. В ZIP есть инструкция по сохранению диагностического отчёта — проверьте его содержимое перед публикацией.
 
-SHA-256 ZIP `79EADED8BA2866FD4EAAC2A6112BEA027F06929771ADB5CD635E5D79B1DE0360`
+SHA-256 ZIP `00C61D448C0E3E536EE02A502C926160BAFD1F9230022CF96EB0670FCFE22C81`
 
 ---
 
@@ -84,9 +84,9 @@ SHA-256 ZIP `79EADED8BA2866FD4EAAC2A6112BEA027F06929771ADB5CD635E5D79B1DE0360`
 
 Twitch Drops Stash is a Windows app that finds Twitch Drops campaigns, tracks progress, and automatically claims eligible rewards. Updates come straight from GitHub Releases: the app checks for a new release, verifies its checksum, replaces itself, and rolls back if the new build does not start.
 
-**[Download 1.0.2 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2)** · [Frequently asked questions](./FAQ.md) · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+**[Download 1.0.3 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3)** · [Frequently asked questions](./FAQ.md) · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
 
-**What's new in 1.0.2.** An interrupted update no longer starts over: the app asks the server for the remainder and appends to the file, and the checksum is verified as before. The speed and the time left are shown under the progress bar, and every 10 seconds a sample goes to the journal — so a report shows whether the link is slow or ragged. The update size is shown before you click. Installing no longer looks like a hang: the start confirmation waits 45 seconds instead of 120.
+**What's new in 1.0.3.** Fixes for bugs found in 1.0.2 right after its release. If anything goes wrong after the file has been replaced, the helper now restores the previous build instead of starting a half-written file: before, that path skipped the rollback and could leave you with no answer and no program. The rollback waits for the app to actually exit and is more patient with a file held by antivirus. Signing into another account while the avatar was loading no longer stores the wrong cookies. Switching channels cancels an update download that has already started. The reward export button returns a CSV instead of a 500.
 
 The overview shows the current reward, progress, and the game queue. Settings cover language, appearance, progress display, and tray behaviour. About holds the update channel and the version check.
 
@@ -101,7 +101,7 @@ The overview shows the current reward, progress, and the game queue. Settings co
 
 ### Getting started
 
-1. Download the [Windows x64 ZIP](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2) and extract it to a writable folder.
+1. Download the [Windows x64 ZIP](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3) and extract it to a writable folder.
 2. Run **Twitch Drops Stash.exe**. Microsoft Edge WebView2 Runtime is required (Windows 11 ships it).
 3. Sign in to Twitch in your browser. Link your Twitch and game accounts if the campaign requires it.
 
@@ -123,7 +123,7 @@ Updates come from this repository's releases. About has a channel: **Stable** or
 
 - Check for updates shows the version, the change list, and the size.
 - Download update puts the archive in the app's temporary folder and compares SHA-256 with the published sum.
-- Install and restart closes the app, keeps the previous EXE as `Twitch Drops Stash.exe.bak-update`, installs the new one, and starts it. If the new build does not confirm its interface, the helper restores the previous EXE.
+- Install and restart closes the app, keeps the previous EXE as `Twitch Drops Stash.exe.bak-update`, installs the new one, and starts it. If anything goes wrong after the file is replaced, the helper restores the previous EXE.
 - The outcome is written to `updates\result.json` and `updates\updater.log` next to the EXE.
 
 **Updating from 0.2.0 Beta 2 by hand.** Exit the app completely, back up the old EXE, and replace it with the new one from the ZIP. Your Twitch session, settings, and watch time are preserved.
@@ -136,7 +136,7 @@ Before writing, check the [frequently asked questions](./FAQ.md): it covers "Unk
 
 For a bug, open a [GitHub issue](https://github.com/kry3/twitch-drops-stash/issues) with your Windows version, the steps to reproduce, and what happened. The ZIP explains how to save a diagnostic report — review it before sharing.
 
-SHA-256 ZIP `79EADED8BA2866FD4EAAC2A6112BEA027F06929771ADB5CD635E5D79B1DE0360`
+SHA-256 ZIP `00C61D448C0E3E536EE02A502C926160BAFD1F9230022CF96EB0670FCFE22C81`
 
 ---
 

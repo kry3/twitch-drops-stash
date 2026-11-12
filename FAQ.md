@@ -61,6 +61,14 @@ MIT. Здесь ответы на то, что спрашивают чаще в�
 файл на другую машину или прочитать его блокнотом и получить вход нельзя. «Выйти из
 аккаунта» удаляет сессию, «Аккаунты» позволяют держать несколько входов.
 
+## Twitch пишет «Ваш браузер не поддерживается»
+
+Это ответ Twitch на старую сборку браузера, а не на приложение: такой браузер не может
+войти, и токен в приложение не придёт. Начиная с 1.0.1 приложение открывает браузеры от
+самого нового к старому и само переходит к следующему, если Twitch отказал. Если отказ
+остался — «Настройки» → «Браузер для входа»: выберите Edge (он обновляется вместе с
+Windows) или обновите другой браузер, затем нажмите «Войти в Twitch» ещё раз.
+
 ## Что в журнале и уходит ли он куда-нибудь
 
 Журнал (`diagnostics\events.jsonl` рядом с EXE) пишется по умолчанию, чтобы у ошибки было
@@ -141,6 +149,12 @@ help.
 **It does not start or the window is blank.** You need Microsoft Edge WebView2 Runtime;
 extract to a writable folder; allow the unsigned EXE in your antivirus. At start the app
 checks the network, Twitch, the clock and folder access, and names the cause with an action.
+
+**Twitch says "Your browser is not supported".** That is Twitch's answer to an old browser
+build, not to the app: such a browser cannot sign in and no token comes back. Since 1.0.1 the
+app opens browsers newest first and moves to the next one when Twitch refuses. If the refusal
+stays: Settings → Sign-in browser — pick Edge (it updates with Windows) or update the other
+browser, then select Sign in to Twitch again.
 
 **Where is the sign-in kept?** Only a token, in `cookies.jar` next to the EXE — not as plain
 text: Windows encrypts it for your user account (DPAPI), so copying the file to another

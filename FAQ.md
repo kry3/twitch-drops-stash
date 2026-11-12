@@ -56,8 +56,10 @@ MIT. Здесь ответы на то, что спрашивают чаще в�
 
 Браузер нужен только для входа: приложение открывает страницу Twitch в вашем обычном
 браузере (Chrome, Edge, Vivaldi или Brave), вы входите там, а приложение получает только
-токен. Пароль оно не видит. Токен лежит в `cookies.jar` рядом с EXE; «Выйти из аккаунта»
-удаляет сессию, «Аккаунты» позволяют держать несколько входов.
+токен. Пароль оно не видит. Токен хранится в `cookies.jar` рядом с EXE — не открытым
+текстом, а зашифрованным средствами Windows для вашей учётной записи (DPAPI): скопировать
+файл на другую машину или прочитать его блокнотом и получить вход нельзя. «Выйти из
+аккаунта» удаляет сессию, «Аккаунты» позволяют держать несколько входов.
 
 ## Что в журнале и уходит ли он куда-нибудь
 
@@ -72,9 +74,17 @@ MIT. Здесь ответы на то, что спрашивают чаще в�
 Два пути. **Telegram** — личное сообщение автору: кроме него никто не видит, аккаунт GitHub
 не нужен. **GitHub** — публичное обращение: видно всем и остаётся в истории.
 
-Приложение показывает оба варианта и первым предлагает тот, который сейчас работает: пока
-сервер отчётов отвечает и отправка в сборке настроена — Telegram, иначе остаётся GitHub. В
-любом случае уходит версия и технические данные сборки, а описание вы пишете сами и видите
+По умолчанию предлагается Telegram, и это работает в любой сборке: в неё вложен ключ только
+на отправку. Прочитать этим ключом нельзя ничего — ни чужие отчёты, ни служебные данные: он
+умеет единственное — дописать сообщение в чат автора. Поэтому его наличие в файлах сборки
+ничего не раскрывает. Если сервер отчётов не отвечает, выбор сам переходит на GitHub, а не
+остаётся «выбранным, но мёртвым».
+
+Отправка из одной сети ограничена (несколько отчётов за четверть часа) — это защита от
+чужого потока сообщений в чат автора. При отказе приложение скажет, сколько ждать, и
+предложит GitHub.
+
+В любом случае уходит версия и технические данные сборки, а описание вы пишете сами и видите
 перед отправкой.
 
 ## Как обновиться и как откатиться
@@ -132,8 +142,10 @@ help.
 extract to a writable folder; allow the unsigned EXE in your antivirus. At start the app
 checks the network, Twitch, the clock and folder access, and names the cause with an action.
 
-**Where is the sign-in kept?** Only a token, in `cookies.jar` next to the EXE. The password
-is never seen by the app: you sign in on the Twitch site in your browser.
+**Where is the sign-in kept?** Only a token, in `cookies.jar` next to the EXE — not as plain
+text: Windows encrypts it for your user account (DPAPI), so copying the file to another
+machine or reading it in Notepad does not give anyone your sign-in. The password is never
+seen by the app: you sign in on the Twitch site in your browser.
 
 **What is in the journal?** `diagnostics\events.jsonl`: version, system, collection events,
 followed channel names, account id. No sign-in token. It never leaves the machine by itself:
@@ -143,10 +155,17 @@ only what you send with the "Report a problem" button. `diagnostics.disabled` tu
 author: nobody else sees it, and no GitHub account is needed. **GitHub** is a public issue:
 everyone sees it and it stays in the history.
 
-The app shows both and offers first the one that works right now: Telegram while the report
-server answers and sending is set up in this build, GitHub otherwise. Either way it carries
-the version and the technical data of the build, and the description is yours — it stays
-visible before sending.
+Telegram is offered first and it works in every build: the app carries a key that may only
+send. That key cannot read anything — not other people's reports, not the service data — it
+can only append a message to the author's chat, so having it in the shipped files reveals
+nothing. If the report server does not answer, the choice moves to GitHub by itself instead
+of staying "selected but dead".
+
+Sending from one network is limited (a few reports per quarter of an hour) so that a foreign
+flood cannot fill the author's chat; a refusal names the wait and offers GitHub.
+
+Either way it carries the version and the technical data of the build, and the description is
+yours — it stays visible before sending.
 
 **How do I update or roll back?** About → Check for updates → Download → Install and restart.
 The previous EXE is kept as `Twitch Drops Stash.exe.bak-update` and restored if the new build

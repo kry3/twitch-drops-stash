@@ -13,7 +13,7 @@
 
 **[Скачать 1.0.3 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3) · [Частые вопросы](./FAQ.md) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
 
-**Что нового в 1.0.3.** Исправление ошибок, найденных в 1.0.2 сразу после выпуска. Если после замены файла что-то пошло не так, помощник теперь возвращает прежнюю сборку, а не запускает недописанный файл: раньше в этот момент откат не выполнялся, и человек оставался без ответа и без программы. Откат ждёт фактического выхода приложения и терпеливее относится к файлу, занятому антивирусом. Вход в другой аккаунт во время загрузки аватарки больше не записывает чужие cookies. Смена канала отменяет уже начатую загрузку обновления. Кнопка выгрузки наград отдаёт CSV, а не ошибку 500.
+**Что нового в 1.0.3.** Исправление ошибок, найденных в 1.0.2 сразу после выпуска. Если после замены файла что-то пошло не так, помощник теперь возвращает прежнюю сборку, а не запускает недописанный файл: раньше в этот момент откат не выполнялся, и человек оставался без ответа и без программы. Если вернуть прежнюю сборку не удалось, он говорит об этом окном: что не удалось, где копия прежней сборки и что с ней сделать, ниже — пути к журналу и результату. Откат ждёт фактического выхода приложения и терпеливее относится к файлу, занятому антивирусом. Вход в другой аккаунт во время загрузки аватарки больше не записывает чужие cookies. Смена канала отменяет уже начатую загрузку обновления. Кнопка выгрузки наград отдаёт CSV, а не ошибку 500.
 
 ## Скриншоты
 
@@ -76,7 +76,9 @@ Windows запоминает предупреждение по метке «ск
 
 При ошибке откройте [GitHub Issue](https://github.com/kry3/twitch-drops-stash/issues) и укажите версию Windows, шаги воспроизведения и результат. В ZIP есть инструкция по сохранению диагностического отчёта — проверьте его содержимое перед публикацией.
 
-SHA-256 ZIP `00C61D448C0E3E536EE02A502C926160BAFD1F9230022CF96EB0670FCFE22C81`
+SHA-256 ZIP `15C31BDC9B7F8D7A1426634B3B5F126C40091E698A164099135DCB4790F0093C`
+
+Файл пересобран 13 ноября: сумма выше относится к нынешнему файлу выпуска. Архив, скачанный раньше, — другой.
 
 ---
 
@@ -86,7 +88,7 @@ Twitch Drops Stash is a Windows app that finds Twitch Drops campaigns, tracks pr
 
 **[Download 1.0.3 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.3)** · [Frequently asked questions](./FAQ.md) · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
 
-**What's new in 1.0.3.** Fixes for bugs found in 1.0.2 right after its release. If anything goes wrong after the file has been replaced, the helper now restores the previous build instead of starting a half-written file: before, that path skipped the rollback and could leave you with no answer and no program. The rollback waits for the app to actually exit and is more patient with a file held by antivirus. Signing into another account while the avatar was loading no longer stores the wrong cookies. Switching channels cancels an update download that has already started. The reward export button returns a CSV instead of a 500.
+**What's new in 1.0.3.** Fixes for bugs found in 1.0.2 right after its release. If anything goes wrong after the file has been replaced, the helper now restores the previous build instead of starting a half-written file: before, that path skipped the rollback and could leave you with no answer and no program. If even the previous build cannot be restored, it now says so in a window: what failed, where the copy is, and what to do with it, with the log and result paths below. The rollback waits for the app to actually exit and is more patient with a file held by antivirus. Signing into another account while the avatar was loading no longer stores the wrong cookies. Switching channels cancels an update download that has already started. The reward export button returns a CSV instead of a 500.
 
 The overview shows the current reward, progress, and the game queue. Settings cover language, appearance, progress display, and tray behaviour. About holds the update channel and the version check.
 
@@ -136,7 +138,9 @@ Before writing, check the [frequently asked questions](./FAQ.md): it covers "Unk
 
 For a bug, open a [GitHub issue](https://github.com/kry3/twitch-drops-stash/issues) with your Windows version, the steps to reproduce, and what happened. The ZIP explains how to save a diagnostic report — review it before sharing.
 
-SHA-256 ZIP `00C61D448C0E3E536EE02A502C926160BAFD1F9230022CF96EB0670FCFE22C81`
+SHA-256 ZIP `15C31BDC9B7F8D7A1426634B3B5F126C40091E698A164099135DCB4790F0093C`
+
+The file was rebuilt on 13 November: the sum above belongs to the current release file; an archive downloaded before that day is a different one.
 
 ---
 

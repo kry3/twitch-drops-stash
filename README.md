@@ -5,15 +5,15 @@
 <h1 align="center">Twitch Drops Stash</h1>
 
 <p align="center">
-  <strong>Windows x64 · 1.0.1 · Stable</strong><br>
+  <strong>Windows x64 · 1.0.2 · Stable</strong><br>
   <a href="#возможности">Русский</a> · <a href="#english">English</a>
 </p>
 
 Приложение для Windows, которое находит кампании Twitch Drops, отслеживает прогресс и автоматически забирает доступные награды. Обновления приходят прямо из GitHub Releases: приложение само проверяет новый выпуск, сверяет контрольную сумму, заменяет себя и откатывается, если новая сборка не запустилась.
 
-**[Скачать 1.0.1 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.1)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.1) · [Частые вопросы](./FAQ.md) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+**[Скачать 1.0.2 для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2)** · [Что изменилось](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2) · [Частые вопросы](./FAQ.md) · [Сообщить об ошибке](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Предложить идею](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
 
-**Что нового в 1.0.1.** Исправлен вход. Приложение открывало первый найденный браузер, и если он старый, Twitch отвечал «Ваш браузер не поддерживается» — при этом рядом мог стоять свежий Edge, который никто не пробовал. Теперь открывается самый новый из установленных браузеров, отказ Twitch распознаётся, и приложение само переходит к следующему; если отказали все — в окне сказано, что делать. Браузер, выбранный в настройках вручную, не подменяется. Первая стабильная сборка 1.0 остаётся в силе: новых экранов и обещаний не появилось.
+**Что нового в 1.0.2.** Обновление больше не начинается заново после обрыва: приложение просит у сервера остаток и дописывает файл, а сумма проверяется как раньше. Под полосой прогресса видно скорость и остаток времени, а раз в 10 секунд замер уходит в журнал — по отчёту видно, медленный это канал или рваный. Размер обновления показан до нажатия. Установка перестала выглядеть зависанием: подтверждение запуска ждётся 45 секунд вместо 120.
 
 ## Скриншоты
 
@@ -40,7 +40,7 @@
 
 ## Первый запуск
 
-1. Скачайте [ZIP для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.1) и распакуйте в отдельную папку с правом записи.
+1. Скачайте [ZIP для Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2) и распакуйте в отдельную папку с правом записи.
 2. Запустите **Twitch Drops Stash.exe**. Нужен Microsoft Edge WebView2 Runtime (в Windows 11 он уже есть).
 3. Войдите в Twitch через браузер. Для кампаний с привязкой свяжите аккаунт Twitch с аккаунтом игры.
 
@@ -76,7 +76,7 @@ Windows запоминает предупреждение по метке «ск
 
 При ошибке откройте [GitHub Issue](https://github.com/kry3/twitch-drops-stash/issues) и укажите версию Windows, шаги воспроизведения и результат. В ZIP есть инструкция по сохранению диагностического отчёта — проверьте его содержимое перед публикацией.
 
-SHA-256 ZIP `D1DCAC3B81C3273CC0859ABAE60BF9147CDB7EEB4C7856A7F43CFABF33510A3B`
+SHA-256 ZIP `79EADED8BA2866FD4EAAC2A6112BEA027F06929771ADB5CD635E5D79B1DE0360`
 
 ---
 
@@ -84,9 +84,9 @@ SHA-256 ZIP `D1DCAC3B81C3273CC0859ABAE60BF9147CDB7EEB4C7856A7F43CFABF33510A3B`
 
 Twitch Drops Stash is a Windows app that finds Twitch Drops campaigns, tracks progress, and automatically claims eligible rewards. Updates come straight from GitHub Releases: the app checks for a new release, verifies its checksum, replaces itself, and rolls back if the new build does not start.
 
-**[Download 1.0.1 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.1)** · [Frequently asked questions](./FAQ.md) · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
+**[Download 1.0.2 for Windows x64](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2)** · [Frequently asked questions](./FAQ.md) · [Report a bug](https://github.com/kry3/twitch-drops-stash/issues/new?template=bug-report.yml) · [Suggest an idea](https://github.com/kry3/twitch-drops-stash/issues/new?template=feature-request.yml)
 
-**What's new in 1.0.1.** A sign-in fix. The app opened the first browser it found, and when that browser was old Twitch answered "Your browser is not supported" — while a current Edge sat next to it, never tried. The newest installed browser now opens first, Twitch's refusal is recognised, and the app moves to the next one by itself; when every browser is refused, the window says what to do. A browser chosen in settings by hand is never replaced. The first stable build, 1.0, stays as it was: no new screens and no new promises.
+**What's new in 1.0.2.** An interrupted update no longer starts over: the app asks the server for the remainder and appends to the file, and the checksum is verified as before. The speed and the time left are shown under the progress bar, and every 10 seconds a sample goes to the journal — so a report shows whether the link is slow or ragged. The update size is shown before you click. Installing no longer looks like a hang: the start confirmation waits 45 seconds instead of 120.
 
 The overview shows the current reward, progress, and the game queue. Settings cover language, appearance, progress display, and tray behaviour. About holds the update channel and the version check.
 
@@ -101,7 +101,7 @@ The overview shows the current reward, progress, and the game queue. Settings co
 
 ### Getting started
 
-1. Download the [Windows x64 ZIP](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.1) and extract it to a writable folder.
+1. Download the [Windows x64 ZIP](https://github.com/kry3/twitch-drops-stash/releases/tag/v1.0.2) and extract it to a writable folder.
 2. Run **Twitch Drops Stash.exe**. Microsoft Edge WebView2 Runtime is required (Windows 11 ships it).
 3. Sign in to Twitch in your browser. Link your Twitch and game accounts if the campaign requires it.
 
@@ -136,7 +136,7 @@ Before writing, check the [frequently asked questions](./FAQ.md): it covers "Unk
 
 For a bug, open a [GitHub issue](https://github.com/kry3/twitch-drops-stash/issues) with your Windows version, the steps to reproduce, and what happened. The ZIP explains how to save a diagnostic report — review it before sharing.
 
-SHA-256 ZIP `D1DCAC3B81C3273CC0859ABAE60BF9147CDB7EEB4C7856A7F43CFABF33510A3B`
+SHA-256 ZIP `79EADED8BA2866FD4EAAC2A6112BEA027F06929771ADB5CD635E5D79B1DE0360`
 
 ---
 
